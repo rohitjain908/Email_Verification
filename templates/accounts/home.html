@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link href="{% static 'css/accounts/home.css' %}" rel="stylesheet">
+</head>
+<body>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        {{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <h1>Welcome to our website</h1>
+  <div>Want to explore more,<br>click here,<a href="{% url 'index' %}">Website</a></div> 
+</body>
+</html>
